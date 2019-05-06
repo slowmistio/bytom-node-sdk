@@ -14,7 +14,9 @@
   "scripts": {
     "docs": "jsdoc -c jsdoc.conf.json",
     "build": "babel src --out-dir dist",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -24,6 +26,8 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "btoa": "^1.2.1"
-  }
+    "btoa": "^1.2.1",
+    "snyk": "^1.161.1"
+  },
+  "snyk": true
 }
